@@ -7,6 +7,14 @@
   --color-softTextColor: "#626262";
 }
 
-nav, section {
+body {
+  @apply text-[17px] bg-gray-50 text-gray-800;
+}
+
+button {
+  @apply cursor-pointer;
+}
+
+.max-container {
   @apply max-w-7xl mx-auto px-4 md:px-6;
 }
