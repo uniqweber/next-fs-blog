@@ -7,3 +7,6 @@
   --color-softTextColor: "#626262";
 }
 
+nav, section {
+  @apply max-w-7xl mx-auto px-4 md:px-6;
+}
