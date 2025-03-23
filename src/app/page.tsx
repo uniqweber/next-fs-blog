@@ -5,11 +5,11 @@ import Blogs from "./(pages)/home/homeComp/Blogs";
 
 const Home = () => {
   return (
-    <main className="space-y-16">
+    <div className="space-y-16">
       <Hero />
       <PopularCategories />
       <Blogs />
-    </main>
+    </div>
   );
 };
 

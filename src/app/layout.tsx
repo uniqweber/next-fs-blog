@@ -2,11 +2,11 @@ import type {Metadata} from "next";
 import {Nunito} from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-// import Footer from "@/components/Footer";
+import Footer from "@/components/Footer";
 
-const notoSans = Nunito({
+const nunito = Nunito({
   subsets: ["latin"],
-  weight: [ "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -22,10 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` ${notoSans.className}  antialiased`}>
+      <body className={` ${nunito.className}  antialiased`}>
         <Navbar />
-        {children}
-        {/* <Footer /> */}
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
