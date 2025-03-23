@@ -1,12 +1,12 @@
 import type {Metadata} from "next";
-import {Noto_Sans} from "next/font/google";
+import {Nunito} from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 // import Footer from "@/components/Footer";
 
-const notoSans = Noto_Sans({
+const notoSans = Nunito({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: [ "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {

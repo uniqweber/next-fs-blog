@@ -25,13 +25,13 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <header className="bg-gray-50 relative z-10">
+    <header className="bg-white relative z-10">
       <div className="flex items-center justify-between h-16 max-container">
         <h5 className="text-2xl font-bold relative z-20">MindInk</h5>
 
         {/* Menu */}
         <nav
-          className={`fixed top-0 z-0 left-0 right-0 h-full w-full bg-gray-50 flex flex-col md:flex-row items-center justify-center md:static md:h-auto md:w-auto gap-8 md:gap-4 transition-all duration-300 ease-in-out  ${
+          className={`fixed top-0 z-0 left-0 right-0 h-full w-full bg-white flex flex-col md:flex-row items-center justify-center md:static md:h-auto md:w-auto gap-8 md:gap-4 transition-all duration-300 ease-in-out  ${
             isOpen ? "scale-100 opacity-100  " : "opacity-0 md:opacity-100 rounded-bl-full scale-0 md:scale-100 "
           }`}
           style={{transformOrigin: "top right"}}

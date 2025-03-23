@@ -8,7 +8,7 @@
 }
 
 body {
-  @apply text-base bg-gray-50 text-gray-800;
+  @apply text-base bg-gray-100 text-gray-800;
 }
 
 button {
