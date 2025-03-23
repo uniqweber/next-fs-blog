@@ -5,7 +5,6 @@
   --color-textColor: "#000";
   --color-softBg: "#f0f0f0";
   --color-softTextColor: "#626262";
-  --text-base: 17px;
 }
 
 body {
@@ -21,5 +20,3 @@ button {
     @apply max-w-7xl mx-auto px-4 md:px-6;
   }
 }
-
-

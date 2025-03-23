@@ -7,25 +7,17 @@ import React, {useEffect, useState} from "react";
 import ToggleButton from "./ui/ToggleButton";
 
 const Navbar = () => {
-  const path = usePathname();
-  const isActive = (pathname: string) => pathname === path;
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const handleToggle = () => {
-    setIsOpen((prev) => !prev);
-  };
+  const path = usePathname();
+  const isActive = (pathname: string) => pathname === path;
+  const handleToggle = () => setIsOpen((prev) => !prev);
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 768) {
-        setIsOpen(false);
-      }
-    };
-
+    const handleResize = () => window.innerWidth >= 768 && setIsOpen(false);
     window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
@@ -33,13 +25,13 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <nav className="bg-gray-50 relative z-10">
+    <header className="bg-gray-50 relative z-10">
       <div className="flex items-center justify-between h-16 max-container">
-        <h5 className="text-2xl font-bold relative z-20">Blogify</h5>
+        <h5 className="text-2xl font-bold relative z-20">MindInk</h5>
 
         {/* Menu */}
-        <div
-          className={`fixed top-0 z-0 left-0 right-0 h-full w-full bg-gray-50 flex flex-col md:flex-row items-center justify-center md:static md:h-auto md:w-auto gap-8 md:gap-4 transition-all  ${
+        <nav
+          className={`fixed top-0 z-0 left-0 right-0 h-full w-full bg-gray-50 flex flex-col md:flex-row items-center justify-center md:static md:h-auto md:w-auto gap-8 md:gap-4 transition-all duration-300 ease-in-out  ${
             isOpen ? "scale-100 opacity-100  " : "opacity-0 md:opacity-100 rounded-bl-full scale-0 md:scale-100 "
           }`}
           style={{transformOrigin: "top right"}}
@@ -54,14 +46,14 @@ const Navbar = () => {
               {route.name}
             </Link>
           ))}
-        </div>
+        </nav>
 
         {/* Mobile Toggle Button */}
         <div className="md:hidden">
           <ToggleButton isOpen={isOpen} handleToggle={handleToggle} />
         </div>
       </div>
-    </nav>
+    </header>
   );
 };
 
