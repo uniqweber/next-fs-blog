@@ -5,10 +5,11 @@
   --color-textColor: "#000";
   --color-softBg: "#f0f0f0";
   --color-softTextColor: "#626262";
+  --text-base: 17px;
 }
 
 body {
-  @apply text-[17px] bg-gray-50 text-gray-800;
+  @apply text-base bg-gray-50 text-gray-800 ;
 }
 
 button {
@@ -16,5 +17,5 @@ button {
 }
 
 .max-container {
-  @apply max-w-7xl mx-auto px-4 md:px-6;
+  @apply max-w-7xl mx-auto px-4 md:px-6 ;
 }
