@@ -9,13 +9,17 @@
 }
 
 body {
-  @apply text-base bg-gray-50 text-gray-800 ;
+  @apply text-base bg-gray-50 text-gray-800;
 }
 
 button {
   @apply cursor-pointer;
 }
 
-.max-container {
-  @apply max-w-7xl mx-auto px-4 md:px-6 ;
+@layer utilities {
+  .max-container {
+    @apply max-w-7xl mx-auto px-4 md:px-6;
+  }
 }
+
+
