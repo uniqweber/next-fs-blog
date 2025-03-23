@@ -1,10 +1,11 @@
 import BlogCard from "@/components/ui/BlogCard";
-import SectionTitle from "@/components/ui/SectionTitle";
 import React from "react";
 
 const CardList = () => {
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
+      <BlogCard />
+      <BlogCard />
       <BlogCard />
       <BlogCard />
       <BlogCard />

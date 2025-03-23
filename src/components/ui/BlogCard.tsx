@@ -4,7 +4,7 @@ import React from "react";
 const Post = () => {
   const date = new Date().toDateString();
   return (
-    <div className="flex md:h-60 flex-col md:flex-row items-start gap-4 bg-white  p-3 rounded-2xl">
+    <div className="flex md:h-52 flex-col md:flex-row items-start gap-4 ">
       <Image
         src="/assets/p1.jpeg"
         width={300}
@@ -19,7 +19,7 @@ const Post = () => {
         </div>
         <h3
           title=" How to start a blog in 10 minutes with Next.js and Tailwind CSS"
-          className="text-lg font-bold  my-2 line-clamp-2 leading-6  text-gray-700"
+          className="text-xl font-bold  my-2 line-clamp-2 leading-6"
         >
           How to start a blog in 10 minutes with Next.js and Tailwind CSS
         </h3>

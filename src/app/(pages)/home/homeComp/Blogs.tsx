@@ -7,11 +7,11 @@ const Blogs = () => {
   return (
     <div className=" max-container">
       <SectionTitle title="Recent Posts" />
-      <div className="grid md:grid-cols-5 gap-4">
-        <div className="col-span-3">
+      <div className="grid md:grid-cols-5 gap-10">
+        <div className="md:col-span-3">
           <CardList />
         </div>
-        <div className=" col-span-2">
+        <div className="md:col-span-2">
           <BlogsMenu />
         </div>
       </div>

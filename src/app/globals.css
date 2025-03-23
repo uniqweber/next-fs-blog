@@ -1,14 +1,7 @@
 @import "tailwindcss";
 
-@theme {
-  --color-bg: "#fff";
-  --color-textColor: "#000";
-  --color-softBg: "#f0f0f0";
-  --color-softTextColor: "#626262";
-}
-
 body {
-  @apply text-base bg-gray-100 text-gray-800;
+  @apply text-base bg-white text-gray-800;
 }
 
 button {
