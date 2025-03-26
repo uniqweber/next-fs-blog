@@ -7,8 +7,9 @@ const Home = () => {
   return (
     <div className="space-y-16">
       <Hero />
-      <PopularCategories />
+      <PopularCategories  />
       <Blogs />
+
     </div>
   );
 };

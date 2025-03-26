@@ -17,6 +17,10 @@ export const navRoutes: NavRoute[] = [
     href: "/",
   },
   {
+    name: "Blogs",
+    href: "/blogs",
+  },
+  {
     name: "About",
     href: "/about",
   },

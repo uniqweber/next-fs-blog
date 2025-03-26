@@ -6,11 +6,11 @@ const Post = () => {
   return (
     <div className="flex md:h-52 flex-col md:flex-row items-start gap-4 ">
       <Image
-        src="/assets/p1.jpeg"
+        src="/assets/travel.png"
         width={300}
         height={300}
         alt="p1"
-        className="w-full md:w-60 flex-shrink-0 h-52 md:h-full object-cover rounded-xl brightness-75"
+        className="w-full md:w-60 flex-shrink-0 h-52 md:h-full object-cover rounded-xl brightness-75 object-top"
       />
       <div className="w-full relative h-full ">
         <div className="flex items-center gap-1 text-sm font-semibold">

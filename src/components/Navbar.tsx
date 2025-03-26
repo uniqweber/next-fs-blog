@@ -16,13 +16,10 @@ const Navbar = () => {
   useEffect(() => {
     const handleResize = () => window.innerWidth >= 768 && setIsOpen(false);
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "auto";
-  }, [isOpen]);
+
 
   return (
     <header className="bg-white relative z-10">

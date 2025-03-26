@@ -1,11 +1,9 @@
-import SectionTitle from "@/components/ui/SectionTitle";
 import {popularCategories} from "@/constants";
 import React from "react";
 
 const PopularCategories = () => {
   return (
     <div className="max-container">
-      <SectionTitle title="Popular Categories" />
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {popularCategories.map((category) => (
           <div

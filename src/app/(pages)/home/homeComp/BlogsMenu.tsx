@@ -13,6 +13,7 @@ const BlogsMenu = () => {
           <PopularBlogCard />
           <PopularBlogCard />
           <PopularBlogCard />
+          <PopularBlogCard />
         </div>
       </div>
       <div>
@@ -37,6 +38,7 @@ const BlogsMenu = () => {
           <EditorChosenBlogCard />
           <EditorChosenBlogCard />
           <EditorChosenBlogCard />
+
         </div>
       </div>
     </div>
