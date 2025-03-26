@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const Login = () => {
+const Register = () => {
   return (
     <section className="max-container">
       <div className="min-h-[calc(82.8vh)] flex items-center justify-center ">
@@ -19,6 +19,14 @@ const Login = () => {
           </div>
           <form action="">
             <label htmlFor="email" className="text-sm font-semibold ">
+              Name
+            </label>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              className="block w-full px-3 h-10 border border-gray-200 rounded-md mt-1 mb-2 text-sm"
+            />
+            <label htmlFor="email" className="text-sm font-semibold ">
               Email
             </label>
             <input
@@ -26,12 +34,20 @@ const Login = () => {
               placeholder="Enter your email"
               className="block w-full px-3 h-10 border border-gray-200 rounded-md mt-1 mb-2 text-sm"
             />
-            <label htmlFor="email" className="text-sm font-semibold">
-              Email
+            <label htmlFor="email" className="text-sm font-semibold ">
+              Password
             </label>
             <input
-              type="email"
-              placeholder="Enter your Password"
+              type="password"
+              placeholder="Enter your password"
+              className="block w-full px-3 h-10 border border-gray-200 rounded-md mt-1 mb-2 text-sm"
+            />
+            <label htmlFor="email" className="text-sm font-semibold">
+              Confirm Password
+            </label>
+            <input
+              type="password"
+              placeholder="Confirm your password"
               className="block w-full px-3 h-10 border border-gray-200 rounded-md text-sm mt-1 mb-2"
             />
 
@@ -39,9 +55,9 @@ const Login = () => {
               Create account
             </button>
             <p className="text-sm text-center text-gray-500 mt-4">
-              Don&apos;t have an account?{" "}
-              <Link href="/register" className="text-blue-600 hover:text-blue-500">
-                Register
+              Already have an account?{" "}
+              <Link href="/login" className="text-blue-600 hover:text-blue-500">
+                Login
               </Link>
             </p>
           </form>
@@ -51,4 +67,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
