@@ -2,13 +2,14 @@
 
 import {navRoutes} from "@/constants";
 import Link from "next/link";
-import {usePathname} from "next/navigation";
+import {usePathname, useRouter} from "next/navigation";
 import React, {useEffect, useState} from "react";
 import ToggleButton from "./ui/ToggleButton";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
+  const navigate = useRouter();
   const path = usePathname();
   const isActive = (pathname: string) => pathname === path;
   const handleToggle = () => setIsOpen((prev) => !prev);
@@ -19,12 +20,12 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-
-
   return (
-    <header className="bg-white relative z-10">
+    <header className="relative z-10 bg-white">
       <div className="flex items-center justify-between h-16 max-container">
-        <h5 className="text-2xl font-bold relative z-20">MindInk</h5>
+        <h5 onClick={() => navigate.push("/")} className="relative z-20 text-2xl font-bold cursor-pointer">
+          MindInk
+        </h5>
 
         {/* Menu */}
         <nav

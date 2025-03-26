@@ -3,6 +3,7 @@ import EditorChosenBlogCard from "@/components/ui/EditorChosenBlogCard";
 import PopularSectionTitle from "@/components/ui/PopularSectionTitle";
 import React from "react";
 import {popularCategories} from "@/constants";
+import Link from "next/link";
 
 const BlogsMenu = () => {
   return (
@@ -21,13 +22,14 @@ const BlogsMenu = () => {
         <div>
           <div className="grid grid-cols-2 gap-2">
             {popularCategories.map((category) => (
-              <div
+              <Link
+                href={"/blogs"}
                 key={category.id}
                 className={`flex cursor-pointer hover:scale-105 duration-300 items-center  justify-center gap-3  p-3 rounded-xl ${category.bgColor}`}
               >
-                {/* <Image src={category.img} width={30} height={30} alt={category.name} className="rounded-full h-8 w-8 object-cover ring-4 ring-white" /> */}
+                {/* <Image src={category.img} width={30} height={30} alt={category.name} className="object-cover w-8 h-8 rounded-full ring-4 ring-white" /> */}
                 <h5 className="font-semibold ">{category.name}</h5>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -38,7 +40,6 @@ const BlogsMenu = () => {
           <EditorChosenBlogCard />
           <EditorChosenBlogCard />
           <EditorChosenBlogCard />
-
         </div>
       </div>
     </div>
