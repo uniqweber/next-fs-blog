@@ -21,11 +21,7 @@ const Register = () => {
             <label htmlFor="email" className="text-sm font-semibold ">
               Name
             </label>
-            <input
-              type="text"
-              placeholder="Enter your name"
-              className="block w-full px-3 h-10 border border-gray-200 rounded-md mt-1 mb-2 text-sm"
-            />
+            <input type="text" placeholder="Enter your name" className="block w-full px-3 h-10 border border-gray-200 rounded-md mt-1 mb-2 text-sm" />
             <label htmlFor="email" className="text-sm font-semibold ">
               Email
             </label>
